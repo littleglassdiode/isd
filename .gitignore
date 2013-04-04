@@ -1,3 +1,4 @@
+.*.sw*
 default/dep/
 default/skull_defense.*
 default/*.o
