@@ -58,9 +58,26 @@ do { \
 #define CTR_VAR 4
 
 #define BUILDING_MAX 3
+#define EDGE_WALL 0x80
+#define EDGE_HOLE 0x40
+#define EDGE_HOLEPOS 0x3F
 
 
 volatile uint8_t map[MAP_X / 4 * MAP_Y];
+volatile uint8_t rooms[9] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
+volatile uint8_t edges[12] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+/* [room] edge
+ * [0]  0 [1]  1 [2]
+ *  2      3      4
+ * [3]  5 [4]  6 [5]
+ *  7      8      9
+ * [6] 10 [7] 11 [9]
+ * in general
+ *     n-3
+ * n-1 [r] n
+ *     n+2
+ * n=r+2(r/3)
+ */
 
 struct button_info {
     uint16_t btn_held;
