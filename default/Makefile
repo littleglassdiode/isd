@@ -11,9 +11,9 @@ CC = avr-gcc
 INFO=../gameinfo.properties
 
 ## Kernel settings
-KERNEL_DIR = /home/clay/uzebox/uzebox_src_3.3/kernel/
+KERNEL_DIR = /home/clay/uzebox/uzebox-read-only/kernel/
 KERNEL_OPTIONS  = -DVIDEO_MODE=5 -DINTRO_LOGO=1
-UZEBIN_DIR = /home/clay/uzebox/uzebox_src_3.3/bin/
+UZEBIN_DIR = /home/clay/uzebox/uzebox-read-only/bin/
 
 
 ## Options common to compile, link and assembly rules
